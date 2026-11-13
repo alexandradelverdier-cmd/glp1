@@ -136,17 +136,6 @@ flowchart LR
 
 ---
 
-## Lancer le projet
-
-```bash
-dbt seed
-dbt build
-```
-
-Prérequis : dbt Core avec l'adaptateur BigQuery, fichiers trimestriels FAERS chargés dans le dataset brut. L'ensemble du projet tient dans l'offre gratuite de BigQuery.
-
----
-
 ## Limites
 
 - FAERS est un système de déclaration spontanée : il mesure ce qui est déclaré, pas la fréquence réelle d'un effet. Un ROR traduit un déséquilibre de déclaration, pas un risque. Exemple : ROR de 76 pour la neuropathie optique, alors que les études épidémiologiques évoquent un risque environ deux fois plus élevé.
@@ -158,5 +147,5 @@ Prérequis : dbt Core avec l'adaptateur BigQuery, fichiers trimestriels FAERS ch
 
 ## Autrice
 
-Alexandra Delverdier, analytics engineer, ancienne infirmière.
+Alexandra Delverdier, analytics engineer.
 [LinkedIn](https://www.linkedin.com/in/alexandra-delverdier-65972b353)
