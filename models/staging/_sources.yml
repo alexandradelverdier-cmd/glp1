@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: faers_raw
+    database: alexandra-delverdier-perso
+    schema: faers_raw_layer
+    description: "Données brutes FAERS (FDA Adverse Event Reporting System), une table par trimestre, chargées par ingestion/load_faers.py."
+    tables:
+      - name: demo
+        identifier: "demo_*"
+        description: "Un rapport par ligne (primaryid) : patient, dates, pays. Tous trimestres."
+      - name: drug
+        identifier: "drug_*"
+        description: "Médicaments impliqués dans chaque rapport. Tous trimestres."
+      - name: reac
+        identifier: "reac_*"
+        description: "Effets indésirables déclarés (Preferred Terms MedDRA). Tous trimestres."
+      - name: outc
+        identifier: "outc_*"
+        description: "Issue des cas graves (décès, hospitalisation...). Tous trimestres."
+      - name: deleted
+        identifier: "deleted_*"
+        description: "Liste des caseid supprimés par la FDA, à exclure des analyses."
